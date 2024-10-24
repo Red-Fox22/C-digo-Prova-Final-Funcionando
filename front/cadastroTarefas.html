@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="cadastroTarefas.js" defer></script>
+    <title>Sistema</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a>Gerenciamento de Tarefas</a>
+            <a href="./cadastroUsuarios.html">Cadastro de Tarefas</a>
+            <a href="./cadastroTarefas.html">Cadastro de Tarefas</a>
+            <a href="./index.html">Gerenciamento de Tarefas</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Cadastro de Tarefas</h1>
+        <br><br>
+        <form action="">
+
+            <label for="tipo_tarefa">Tipo:</label><br>
+            <input type="text" id="tipo_tarefa" required>
+            <br>
+            <label for="area_tarefa">Área:</label><br>
+            <input type="text" id="area_tarefa" required>
+            <br><br>
+
+            <label for="nome">Usuários</label><br>
+            <select name="" id="nome">
+                <option value=""></option>
+            </select><br><br>
+
+            <label for="prioridade">Prioridade:</label><br>
+            <select name="" id="prioridade">
+                <option value="baixa">Baixa</option>
+                <option value="media">Média</option>
+                <option value="alta">Alta</option>
+            </select><br><br>
+            <button type="submit" id="cadastrar">Cadastrar</button>
+        </form>
+        <div id="res"></div>
+
+    </main>
+</body>
+
+</html>
