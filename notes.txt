@@ -33,3 +33,5 @@
     //     status: "Pronto"
     //     }
     // ]
+
+npm install --save express sequelize mysql2 cors
