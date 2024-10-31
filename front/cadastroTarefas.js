@@ -29,9 +29,10 @@ cadastrarTarefa.addEventListener('click', (e) => {
     .then(resposta => resposta.json())
     .then(tarefas =>{
         console.log(tarefas)
-        // res.innerHTML = ''
-        // res.innerHTML += dados.message
-        // res.style.marginLeft = '30px'
+        if(tarefas.message){
+            alert('Tarefa Criada com Sucesso!')
+            carregarTarefas()
+        }
     })
     .catch((err)=>{
         console.error("Não foi possível cadastrar o Usuário", err)

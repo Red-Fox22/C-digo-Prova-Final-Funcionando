@@ -22,9 +22,7 @@ cadastrarUsuario.addEventListener('click', (e)=>{
     .then(resposta => resposta.json())
     .then(dados =>{
         console.log(dados)
-        res.innerHTML = ''
-        res.innerHTML += dados.message
-        res.style.marginLeft = '30px'
+        alert('Usuário Cadastrado com Sucesso!')
     })
     .catch((err)=>{
         console.error("Não foi possível cadastrar o Usuário", err)

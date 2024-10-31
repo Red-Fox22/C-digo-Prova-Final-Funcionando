@@ -117,6 +117,7 @@ function excluirTarefa(codTarefa){
         .then(dados =>{
             console.log(dados)
             if(dados.message){
+                alert('Tarefa Excluída com Sucesso!')
                 carregarTarefas()
             }
         })
