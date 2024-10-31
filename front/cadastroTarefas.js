@@ -1,10 +1,43 @@
 let res = document.getElementById('res')
-let cadastrar = document.getElementById('cadastrar')
-console.log(res, cadastrar)
-let prioridade = document.getElementById('prioridade')
+let cadastrarTarefa = document.getElementById('cadastrar')
 let nomeSelect = document.getElementById('nome')
-let area = document.getElementById('area')
-let tipo = document.getElementById('tipo')
+
+
+cadastrarTarefa.addEventListener('click', (e) => {
+    e.preventDefault()
+    const codUsuario = document.getElementById('nome').value
+    const tipo = document.getElementById('tipo').value
+    const area = document.getElementById('area').value
+    let prioridade = document.getElementById('prioridade').value
+    
+    const valores = {
+        codUsuario: codUsuario,
+        tipo: tipo,
+        area: area,
+        prioridade: prioridade,
+    }
+
+    console.log(valores)
+
+    fetch('http://localhost:3000/tarefa', {
+        method: "POST",
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(valores)
+    })
+    .then(resposta => resposta.json())
+    .then(tarefas =>{
+        console.log(tarefas)
+        // res.innerHTML = ''
+        // res.innerHTML += dados.message
+        // res.style.marginLeft = '30px'
+    })
+    .catch((err)=>{
+        console.error("Não foi possível cadastrar o Usuário", err)
+    })
+
+})
 
 function carregarUsuarios() {
     fetch('http://localhost:3000/usuarios')

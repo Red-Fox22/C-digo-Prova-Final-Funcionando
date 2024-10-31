@@ -1,5 +1,26 @@
 .list-container{
     display: grid;
     grid-template-columns: repeat(3, 400px);
+    gap: 30px;
     margin-left: 30px;
+}
+.card{
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: rgb(219, 218, 218);
+    padding: 6px;
+    margin-top: 16px;
+}
+
+.card p{
+    margin-top: 12px;
+}
+
+.card button{
+    margin: 4px
+}
+
+.card .btn {
+    margin-top: 4px;
+    margin-left: 4px;
 }
