@@ -16,8 +16,8 @@ const cadastrarUsuario = async (req, res) => {
 
 const listarUsuario = async (req, res) => {
     try {
-        const post = await Usuario.findAll()
-        res.status(200).json(post)
+        const pesq = await Usuario.findAll()
+        res.status(200).json(pesq)
     } catch (err) {
         res.status(500).json({ message: 'Erro na listagem das Tarefas' })
     }
